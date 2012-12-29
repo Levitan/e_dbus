@@ -20,7 +20,8 @@ e_dbus provides a convenience wrapper for EFL applications using DBus.
 %package devel
 Summary:        e_dbus headers, static libraries, documentation and test programs
 Group:          System Environment/Libraries
-Requires:       %{name}%{?_isa} = %{version}-%{release}
+License:        BSD
+Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 
 %description devel
 Headers, static libraries, test programs and documentation for e_dbus
@@ -62,8 +63,7 @@ find %{buildroot}%{_libdir} -name '*.la' -exec rm -v {} \;
 %{_libdir}/*.so.*
 
 %files devel
-%{_includedir}/e_dbus-1/*.h
-%{_includedir}/e_dbus-1/*/*.h
+%{_includedir}/e_dbus-1/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 
